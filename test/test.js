@@ -1,6 +1,13 @@
 var markupfileindex = require('../index');
-
-var gulp = require('gulp');
 var fs = require('fs');
 
-markupfileindex('./fixture/*.html');
+describe('gulp-minify-html', function() {
+    it('test case1', function() {
+        markupfileindex({
+            title : '서정타이틀',
+            filename : '@index.html',
+            src_dir : 'fixture/',
+            dest_dir : 'fixture/'
+        });
+    });
+});

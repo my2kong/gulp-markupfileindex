@@ -5,11 +5,10 @@ var gulp = require('gulp');
 
 
 gulp.task('default', function() {
-    return gulp.src('./fixture/sample.html')
-        .pipe(markupfileindex({
-            //filename : ''
-            src_dir : 'fixture/',
-            dest_dir : 'fixture/'
-        }))
-        .pipe(gulp.dest('./dist/'));
+    markupfileindex({
+        title : '서정타이틀',
+        filename : 'index.html',
+        src_dir : 'fixture/',
+        dest_dir : 'dist/'
+    });
 });
